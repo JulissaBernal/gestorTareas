@@ -1,9 +1,10 @@
 const path = require("path");
 
 module.exports = {
+  mode:'development',//para saber si esta en desarrollo o producion
   entry: "./src/index.js", //punto de entrada de tu aplicacion
   output: {
-    filaname: "bundle.js", //nombre del archivo de salida
+    filename: "bundle.js", //nombre del archivo de salida
     path: path.resolve(__dirname, "dist"), //carpeta de salida
   },
   module: {
@@ -26,7 +27,9 @@ module.exports = {
   },
   devtool: "source-map", //Genera source maps para facilitar la depuracion
   devServer:{
-    contentBase: path.resolve(__dirname,'dist'),//carpeta en el que correra el servidor
+    static:{
+      directory: path.resolve(__dirname,'dist'),//carpeta en el que correra el servidor
+    },
     compress:true,//habilitar compresion gzit para mejorar la carga
     port:9000,//puerto del servidor de desarrollo
   },
