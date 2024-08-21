@@ -1,5 +1,6 @@
 import { addTask,deleteTask,updateTask } from "./task";
 import { renderTasks } from "./ui"
+import confetti from "canvas-confetti";
 
 
 document.addEventListener('DOMContentLoaded',()=>{
@@ -26,6 +27,13 @@ document.addEventListener('DOMContentLoaded',()=>{
             const taskId=e.target.parentElement.getAttribute('data-id');
             updateTask(taskId);
             renderTasks();
+            if(e.target.innerHTML === "Completar"){
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                  });
+            }
         }
     });
 });

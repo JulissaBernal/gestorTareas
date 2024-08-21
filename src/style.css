@@ -1,6 +1,6 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    font-family:"Matemasie", sans-serif;
+    background-image: url("../dist/imagenes/banercats.jpg");
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -8,10 +8,16 @@ body{
     justify-content: center;
     align-items: center;
 }
+.titulo{
+    text-align: center;
+    color: #060608;
+}
 #app{
-    background-color: white;
+    width: 400px;
+    background-color:#ED501A;
     padding: 20px;
-    border-radius: 5px;
+    border: 5px solid black;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 form{
@@ -20,16 +26,16 @@ form{
 }
 input{
     width: 75%;
-    padding: 8px;
+    padding: 4px;
     margin-right: 10px;
-    border: 1px solid #ddd;
+    border: 2px solid black;
     border-radius: 3px;
 }
 button{
     padding: 5px 8px;
-    background-color: #007bff;
-    color: white;
-    border: none;
+    background-color:#E1AD66;
+    color: black;
+    border: 2px solid black;
     border-radius: 3px;
     cursor: pointer;
 }
@@ -38,9 +44,8 @@ ul{
     padding: 0;
 }
 li{
-    background-color: #f4f4f4;
+    background-color: #ED501A;
     padding: 10px;
-    border: 1px solid #ddd;
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -48,6 +53,6 @@ li{
 }
 li.completed{
     text-decoration: line-through;
-    color: #888;
+    color: white;
 
 }
